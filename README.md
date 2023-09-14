@@ -1,10 +1,7 @@
-# EECS3482: Introduction to Computer Security
+Introduction to Computer Security
+Securing server/client application
 
-## Assignment 1: Securing server/client application
-
-You're presented with a simple client/sever chat application for sending messages and files among its users. 
-
-As part of the assignment, you need to complete the following tasks:
+This is a secured chat room and file transfer server and application that does the following
 
 -   User authentication
 -   Key exchange between the client and server on initialization of the connection.
@@ -12,23 +9,6 @@ As part of the assignment, you need to complete the following tasks:
 -   Confidentiality through encryption of client-sever and client-client massages
 -   Integrity through use of a MAC appended to all messages (client-server and client-client)
 -   Resistance against replay attack
-
-
-### Files
-
-* server.py - server app
-* client.py  - client app
-* chat.py – chat functionality
-* lib folder - includes helper function to facilitate communication 
-* files folder - where sent files are stored.
-* dh - Diffie-Hellman implementation.
-
-### Set-up
-
-To install all the relevant packages run:
-
-* make clean
-* make
 
 ## Usage 
 
@@ -52,85 +32,6 @@ When at least two users have logged in, the program supports the following funct
 
 * Logout using the `exit' command
 
-#### Sample interaction
-
-```
-
-\-\+\-\+\-\+\-\+\-\+\-\+\-\+ \+\-\+\-\+ \+\-\+\-\+\-\+ +-+-+-+-+-+-+
-
-|W|e|l|c|o|m|e| |t|o| |t|h|e| |M|a|t|r|i|x|
-
-\+\-\+\-\+\-\+\-\+\-\+\-\+\-\+ \+\-\+\-\+ \+\-\+\-\+\-\+ +-+-+-+-+-+-+
-
-   
-
-   
-
- ===== Online User ====:
-
-| *  user2            |
-
-| *  user3            |
-
-=======================
-
-\[user1\] Enter command: 
-
-Initiating a chat session with  user2
-
-Sending the chat session details
-
-Chat session is on port 54860
-
-Waiting for chat connection...
-
-Accepted a connection from ('127.0.0.1', 54861)...
-
-user2>Testing
-
-@user2
-
-New session
-
-Received port 54863
-
-Chat server on port 54863
-
-Enter your message to \[user2\]:Hello World
-
-\[user1\] Enter command: user2>Hello back!
-
-   
-
-Initiating a chat session with  user2
-
-Sending the chat session details
-
-Chat session is on port 54875
-
-Waiting for chat connection...
-
-Accepted a connection from ('127.0.0.1', 54876)...
-
-Ready to receive files
-
-Receiving henry-Shakespeare.txt
-```
-
-
-
-## Instructions 
-
-### Server app
-To run a server in a  terminal run 
-	* make server
-	or (without make)
-	*  python3 server.py –p [port #]
-
-### Client app
-*  client.py is client app 
-    *  To run a client: make client
-    *   or python3 client.py –p [port #]
 
 
 
